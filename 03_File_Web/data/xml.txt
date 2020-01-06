@@ -1,0 +1,1 @@
+xml은 extensible markup language 이다.
