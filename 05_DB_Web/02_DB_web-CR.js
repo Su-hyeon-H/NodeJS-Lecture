@@ -106,8 +106,14 @@ var app = http.createServer(function(req, res){
             res.setHeader('Content-type','image/png');
             res.end(data);
         });
-    }
-    else
+    }else if (pathname === '/nodejs.png')
+    {
+        fs.readFile('nodejs.png', function(err, data) {
+            res.statusCode=200;
+            res.setHeader('Content-type','image/png');
+            res.end(data);
+        }); 
+    }else
     {
         res.writeHead(404);
         res.end('Not found');
